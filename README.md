@@ -25,9 +25,9 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Source: https://github.com/phoenixframework/phoenix
 
 
-
-mix phx.gen.schema User users name 
-mix phx.gen.schema Project projects name roles:array:string
-mix phx.gen.schema TimeEntry time_entries date:date minutes:integer submitted:boolean user_id:references:users project_id:references:projects --table time_entries
-mix phx.gen.schema UserProject user_projects user_id:references:users project_id:references:projects
+## Schema generation
+* mix phx.gen.schema User users name 
+* mix phx.gen.schema Project projects name roles:array:string
+* mix phx.gen.schema TimeEntry time_entries date:date minutes:integer submitted:boolean user_id:references:users project_id:references:projects
+* mix phx.gen.schema UserProject user_projects user_id:references:users project_id:references:projects
 
