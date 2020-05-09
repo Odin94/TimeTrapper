@@ -28,6 +28,11 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 ## Schema generation
 * mix phx.gen.schema User users name 
 * mix phx.gen.schema Project projects name roles:array:string
-* mix phx.gen.schema TimeEntry time_entries date:date minutes:integer submitted:boolean user_id:references:users project_id:references:projects
 * mix phx.gen.schema UserProject user_projects user_id:references:users project_id:references:projects
+* mix phx.gen.schema TimeEntry time_entries date:date minutes:integer submitted:boolean user_id:references:users project_id:references:projects
 
+## Endpoint generation
+* mix phx.gen.html Entities User users name 
+* mix phx.gen.html Entities Project projects name roles:array:string
+* mix phx.gen.html Entities UserProject user_projects user_id:references:users project_id:references:projects
+* mix phx.gen.html TimeTracking TimeEntry time_entries date:date minutes:integer submitted:boolean user_id:references:users project_id:references:projects
