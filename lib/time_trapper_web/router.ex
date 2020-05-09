@@ -17,6 +17,10 @@ defmodule TimeTrapperWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/users", UserController
+    resources "/projects", ProjectController
+    resources "/userprojects", UserProjectController
+    resources "/timeentries", TimeEntryController
   end
 
   # Other scopes may use custom stacks.

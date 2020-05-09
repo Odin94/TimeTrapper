@@ -1,0 +1,23 @@
+<h1>Show Time entry</h1>
+
+<ul>
+
+  <li>
+    <strong>Date:</strong>
+    <%= @time_entry.date %>
+  </li>
+
+  <li>
+    <strong>Minutes:</strong>
+    <%= @time_entry.minutes %>
+  </li>
+
+  <li>
+    <strong>Submitted:</strong>
+    <%= @time_entry.submitted %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.time_entry_path(@conn, :edit, @time_entry) %></span>
+<span><%= link "Back", to: Routes.time_entry_path(@conn, :index) %></span>

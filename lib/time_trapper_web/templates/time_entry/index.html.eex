@@ -1,0 +1,30 @@
+<h1>Listing Time entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Minutes</th>
+      <th>Submitted</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for time_entry <- @time_entries do %>
+    <tr>
+      <td><%= time_entry.date %></td>
+      <td><%= time_entry.minutes %></td>
+      <td><%= time_entry.submitted %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.time_entry_path(@conn, :show, time_entry) %></span>
+        <span><%= link "Edit", to: Routes.time_entry_path(@conn, :edit, time_entry) %></span>
+        <span><%= link "Delete", to: Routes.time_entry_path(@conn, :delete, time_entry), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Time entry", to: Routes.time_entry_path(@conn, :new) %></span>
