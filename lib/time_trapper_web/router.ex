@@ -20,7 +20,7 @@ defmodule TimeTrapperWeb.Router do
     resources "/users", UserController
     resources "/projects", ProjectController
     resources "/userprojects", UserProjectController
-    resources "/timeentries", TimeEntryController
+    resources "/entries", TimeEntryController
   end
 
   # Other scopes may use custom stacks.
